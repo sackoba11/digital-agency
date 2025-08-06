@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react'
 import heroimg from '../assets/hero.png'
 import backgroundimage from '../assets/hero_bg.jpg'
-import Aos from 'aos';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 export const Hero = () => {
 
 useEffect(() => {
-  Aos.init({ duration: 800, 
+  AOS.init({ duration: 800, 
     delay: 200,
     once: false,
   });
