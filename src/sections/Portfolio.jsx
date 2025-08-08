@@ -1,22 +1,12 @@
-import { useEffect } from "react";
 import backgroundimage from "../assets/hero_bg.jpg";
 import { projects } from "../export";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import SectionTitle from "../components/SectionTitle";
 import SectionBigTitle from "../components/SectionBigTitle";
 import SectionDescription from "../components/SectionDescription";
 import TextButton from "../components/TextButton";
+import ItemGrid from "../components/ItemGrid";
 
 export const Portfolio = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      delay: 200,
-      once: false,
-    });
-  }, []);
-
   return (
     <div
       id="projects"
@@ -34,12 +24,7 @@ export const Portfolio = () => {
       </SectionDescription>
       <div className="grid lg:grid-cols-2 gris-cols-1 justify-center items-center gap-10 mt-8">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            data-aos="slide-up"
-            data-aos-delay="200"
-            className="w-full flex flex-col items-start justify-center "
-          >
+          <ItemGrid index={index}>
             <img
               src={project.img}
               alt={project.title}
@@ -56,7 +41,7 @@ export const Portfolio = () => {
                 View More
               </TextButton>
             </div>
-          </div>
+          </ItemGrid>
         ))}
       </div>
     </div>

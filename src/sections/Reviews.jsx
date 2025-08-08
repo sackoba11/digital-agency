@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import SectionTitle from "../components/SectionTitle";
 import SectionBigTitle from "../components/SectionBigTitle";
 import SectionDescription from "../components/SectionDescription";
+import ItemGrid from "../components/ItemGrid";
 
 export const Reviews = () => {
   useEffect(() => {
@@ -29,17 +30,11 @@ export const Reviews = () => {
         esse at, modi aliquam. Ipsum cum dolores rerum iste sit exercitationem
         nostrum.
       </SectionDescription>
-      <div
-        data-aos="slide-up"
-        data-aos-delay="200"
-        className="w-full grid lg:grid-cols-4 grid-cols-2 justify-center items-center lg:gap-6 gap-3 mt-6"
-      >
+      <div className="w-full grid lg:grid-cols-4 grid-cols-2 justify-center items-center lg:gap-6 gap-3 mt-6">
         {reviews.map((review, index) => (
-          <div
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay="200"
-            className="flex flex-col justify-center items-start gap-4 bg-gray-100 hover:bg-green-100 lg:py-12 py-5 lg:px-8 px-4 rounded-md cursor-pointer"
+          <ItemGrid
+            index={index}
+            className=" bg-gray-100 lg:py-12 py-5 lg:px-8 px-4"
           >
             <button className="flex justify-center items-center gap-1 bg-white py-2 px-4 rounded-full">
               {review.rating}
@@ -56,7 +51,7 @@ export const Reviews = () => {
                 {review.role}
               </h1>
             </div>
-          </div>
+          </ItemGrid>
         ))}
       </div>
     </div>
