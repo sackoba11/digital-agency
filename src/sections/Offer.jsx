@@ -24,7 +24,7 @@ export const Offer = () => {
       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       Nesciunt hic neque, obcaecati quidem explicabo autem.</p>
       <div className='w-full grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-6 mt-6 '>
-{        services.map((service, index) => (
+        {services.map((service, index) => (
           <div key={index} data-aos='slide-up' data-aos-delay='200' className='flex flex-col items-start justify-center gap-4 p-10 border-2 border-gray-200 bg-white hover:bg-green-100 rounded-md cursor-pointer'>
            <service.icon className='size-[35px] mb-5' />
             <h1 className='text-black text-[25px] capitalize font-poppins leading-[1.2em]'>{service.title}</h1>
