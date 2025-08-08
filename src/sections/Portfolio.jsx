@@ -3,6 +3,10 @@ import backgroundimage from "../assets/hero_bg.jpg";
 import { projects } from "../export";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SectionTitle from "../components/SectionTitle";
+import SectionBigTitle from "../components/SectionBigTitle";
+import SectionDescription from "../components/SectionDescription";
+import TextButton from "../components/TextButton";
 
 export const Portfolio = () => {
   useEffect(() => {
@@ -20,28 +24,14 @@ export const Portfolio = () => {
     justify-center lg:px-[80px] px-[20px] lg:py-[80px] py-[60px] gap-[20px] bg-center"
       style={{ backgroundImage: `url(${backgroundimage})` }}
     >
-      <h1
-        data-aos="zoom-in"
-        data-aos-delay="50"
-        className="text-themegreen uppercase text-sm font-poppins"
-      >
-        OUR PORTFOLIO
-      </h1>
-      <h1
-        data-aos="zoom-in"
-        data-aos-delay="100"
-        className="text-white lg:text-[45px] text-[30px] capitalize leading-[1.2em] font-poppins lg:w-[50%] wu-full text-center"
-      >
+      <SectionTitle>OUR PORTFOLIO</SectionTitle>
+      <SectionBigTitle>
         Explore our portfolio and showcase our best works
-      </h1>
-      <p
-        data-aos="zoom-in"
-        data-aos-delay="150"
-        className="text-gray-300 text-md font-poppins lg:w-[60%] w-full text-center"
-      >
+      </SectionBigTitle>
+      <SectionDescription>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt hic
         neque, obcaecati quidem explicabo autem.
-      </p>
+      </SectionDescription>
       <div className="grid lg:grid-cols-2 gris-cols-1 justify-center items-center gap-10 mt-8">
         {projects.map((project, index) => (
           <div
@@ -62,12 +52,9 @@ export const Portfolio = () => {
               <p className="text-gray-300 text-sm font-poppins text-left">
                 {project.para}
               </p>
-              <button
-                className="text-themegreen hover:text-white
-                text-sm font-semibold uppercase mt-5"
-              >
+              <TextButton className="hover:text-white mt-5">
                 View More
-              </button>
+              </TextButton>
             </div>
           </div>
         ))}

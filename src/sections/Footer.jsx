@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import Button from "../components/Button";
 
 export const Footer = () => {
   return (
@@ -88,9 +89,9 @@ export const Footer = () => {
               placeholder="Enter your email address"
               className="w-full bg-transparent text-white border-2 border-gray-800 p-4 rounded-md"
             />
-            <button className="w-full bg-themegreen hover:bg-white hover:text-black py-4 px-6 text-black text-md font-semibold mt-5 rounded-md">
+            <Button className="w-full bg-themegreen hover:bg-white hover:text-black">
               Subscribe
-            </button>
+            </Button>
           </div>
         </div>
       </div>

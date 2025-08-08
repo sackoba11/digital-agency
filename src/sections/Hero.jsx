@@ -4,6 +4,8 @@ import backgroundimage from "../assets/hero_bg.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionTitle from "../components/SectionTitle";
+import SectionDescription from "../components/SectionDescription";
+import Button from "../components/Button";
 
 export const Hero = () => {
   useEffect(() => {
@@ -23,7 +25,7 @@ export const Hero = () => {
       style={{ backgroundImage: `url(${backgroundimage})` }}
     >
       <div className="lg:w-1/2 w-full flex flex-col gap-[20px] items-start justify-center">
-        <SectionTitle title="Seamless IT Services" />
+        <SectionTitle>Seamless IT Services</SectionTitle>
         <h1
           data-aos="zoom-in"
           data-aos-delay="100"
@@ -31,23 +33,13 @@ export const Hero = () => {
         >
           Transforming Ideas into Digital Success
         </h1>
-        <p
-          data-aos="zoom-in"
-          data-aos-delay="170"
-          className="text-gray-300 text-md font-poppins"
-        >
+        <SectionDescription className="text-gray-300">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit porro
           officiis fugiat aspernatur eligendi dolores quae, eos voluptatibus
           voluptas excepturi reprehenderit unde perferendis, eaque a laboriosam
           eum ut corrupti deleniti.
-        </p>
-        <button
-          data-aos="slide-up"
-          data-aos-delay="200"
-          className="bg-themegreen hover:bg-white hover:text-black py-4 px-6 text-black text-md font-semibold mt-5 rounded-md"
-        >
-          EXPLORE SOLUTIONS
-        </button>
+        </SectionDescription>
+        <Button>EXPLORE SOLUTIONS</Button>
       </div>
       <div className="lg:w-1/2 w-full flex justify-center items-center">
         <div
@@ -64,15 +56,3 @@ export const Hero = () => {
     </div>
   );
 };
-
-// const SectionTitle = () => {
-//   return (
-//     <h1
-//       data-aos="zoom-in"
-//       data-aos-delay="50"
-//       className="text-themegreen uppercase text-sm font-poppins"
-//     >
-//       Seamless IT Services
-//     </h1>
-//   );
-// };
